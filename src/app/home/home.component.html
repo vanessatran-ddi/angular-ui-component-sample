@@ -4,6 +4,25 @@
     A showcase of the design system components, pages, and other resources for service teams.
   </p>
 
+  <goa-table width="100%" mb="xl" (_sort)="handleSort($event)">
+    <thead>
+    <tr>
+      <!-- If I remove the ngFor and put each colunm header manually inside the th, it will work -->
+      <th *ngFor="let col of colDef">
+        <goa-table-sort-header attr.name="{{col}}">
+          {{col}}
+        </goa-table-sort-header>
+      </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let data of tableData">
+      <td *ngFor="let col of colDef">{{ data[col] }}</td>
+    </tr>
+    </tbody>
+  </goa-table>
+
+
   <goa-container>
     <h3>Get started</h3>
     <p>
@@ -50,7 +69,7 @@
   <goa-divider mt="l" mb="l"></goa-divider>
 
   <goa-container type="non-interactive" mb="3xl">
-    <h2>Design system support</h2> 
+    <h2>Design system support</h2>
     <a href="https://goa-dio.slack.com/archives/C02PLLT9HQ9">Get in touch with the design system team on Slack #design-system-support</a>
   </goa-container>
 </main>
