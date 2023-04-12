@@ -1,0 +1,5 @@
+{
+  "html.customData": [
+    "./node_modules/@abgov/web-components/html.html-data.json"
+  ]
+}
