@@ -3,68 +3,76 @@
   <p>
     A showcase of the design system components, pages, and other resources for service teams.
   </p>
+  <h1>Callout</h1>
 
-  <goa-table width="100%" mb="xl" (_sort)="handleSort($event)">
-    <thead>
-    <tr>
-      <!-- If I remove the ngFor and put each colunm header manually inside the th, it will work -->
-      <th *ngFor="let col of colDef">
-        <goa-table-sort-header attr.name="{{col}}">
-          {{col}}
-        </goa-table-sort-header>
-      </th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr *ngFor="let data of tableData">
-      <td *ngFor="let col of colDef">{{ data[col] }}</td>
-    </tr>
-    </tbody>
-  </goa-table>
+  <h2>Emergency</h2>
+  <goa-callout type="emergency" heading="Emergency callout">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  </goa-callout>
 
+  <h2>Important</h2>
+  <goa-callout type="important" heading="Important callout">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  </goa-callout>
 
-  <goa-container>
-    <h3>Get started</h3>
-    <p>
-      This project is a showcase of the design system at the DDI. Every component used is available for use in your service from Storybook. The equivalent is available for designers within the template library in Figma.
-    </p>
+  <h2>Information</h2>
+  <goa-callout type="information" heading="Information callout">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  </goa-callout>
 
-    <a target="_blank" href="https://ui-components.alberta.ca">Read the get started guide for more information</a>
-  </goa-container>
+  <h2>Success</h2>
+  <goa-callout type="success" heading="Success callout">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  </goa-callout>
 
-  <goa-divider mt="m" mb="m"></goa-divider>
+  <h2>Events</h2>
+  <goa-callout type="event" heading="Event callout">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  </goa-callout>
 
-  <goa-grid minChildWidth="30ch">
-    <section>
-      <goa-badge type="success" content="New"></goa-badge>
-      <h2 class="mt-1"><a href="/basic-form">Basic form</a></h2>
-      <p>
-        This page contains a basic form made up of a number of inputs, headings, and containers.
-      </p>
-    </section>
+  <h2>Emergency</h2>
+  <goa-callout type="emergency">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  </goa-callout>
 
-    <section>
-      <goa-badge type="information" content="Coming soon"></goa-badge>
-      <h2 class="mt-1">Complex tables</h2>
-      <p>This page is a showcase of the card component to try out the live component with mock data within a service.</p>
-    </section>
-  </goa-grid>
+  <h2>Important</h2>
+  <goa-callout type="important">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  </goa-callout>
 
-  <goa-grid minChildWidth="30ch">
-    <section>
-      <goa-badge type="information" content="Coming soon"></goa-badge>
-      <h2 class="mt-1">Form stepper</h2>
-      <p>This page is a showcase of the card component to try out the live component with mock data within a service.</p>
-    </section>
+  <h2>Information</h2>
+  <goa-callout type="information">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  </goa-callout>
 
-    <section>
-      <div class="space-4"></div>
-      <h2 class="mt-1">
-        <a target="_blank" href="https://github.com/GovAlta/ui-components/issues/new/choose">+ Suggest a template</a>
-      </h2>
-      <p>Let us know what template you want to see and we will add it here.</p>
-    </section>
-  </goa-grid>
+  <h2>Success</h2>
+  <goa-callout type="success">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  </goa-callout>
+
+  <h2>Events</h2>
+  <goa-callout type="event">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  </goa-callout>
+
+  <h2>Margin Spacing</h2>
+  <goa-callout
+    type="emergency"
+    mt="m"
+    mb="xs"
+    ml="xl"
+    mr="2xl"
+    heading="Emergency callout"
+  >
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  </goa-callout>
+
+  <h2>Medium Callout</h2>
+
+  <h3>Information</h3>
+  <goa-callout type="information" heading="Heading" size="medium">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  </goa-callout>
 
   <goa-divider mt="l" mb="l"></goa-divider>
 
