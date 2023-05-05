@@ -1,0 +1,10 @@
+#test {
+  /*background-color:red;*/
+}
+
+#red {
+  color:blue;
+}
+div {
+  --goa-color-text-default:red;
+}
