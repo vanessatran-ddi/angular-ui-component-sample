@@ -1,4 +1,4 @@
-<goa-one-column-layout>
+<goa-two-column-layout navColumnWidth="300px">
   <section slot="header">
     <goa-microsite-header
       type="beta"
@@ -8,7 +8,33 @@
     <goa-app-header url="/" heading="Design system templates" maxContentWidth="100%">
       <a href="/home">Home</a>
       <a href="/badge">Badge</a>
+      <a href="/details">Details</a>
     </goa-app-header>
+  </section>
+
+  <section slot="nav">
+    <goa-left-nav>
+      <goa-left-nav-item
+        *ngFor="let item of items; let i=index"
+        [active]="item.active"
+        [name]="item.name"
+        [displayname]="item.displayname"
+        (_click)="handleSelectMenuItem($event)"
+        >
+        <ng-template *ngIf="item.subMenus" ngFor let-subMenu [ngForOf]="item.subMenus">
+          <goa-left-nav-item
+            [active]="subMenu.active"
+            [name]="subMenu.name"
+            [displayname]="subMenu.displayname"
+            [url]="subMenu.url"
+            (_click)="handleSelectMenuItem($event)"
+            >
+          </goa-left-nav-item>
+        </ng-template>
+      </goa-left-nav-item>
+    </goa-left-nav>
+
+
   </section>
 
   <goa-page-block width="904px">
@@ -30,4 +56,4 @@
       </goa-app-footer-meta-section>
     </goa-app-footer>
   </section>
-</goa-one-column-layout>
+</goa-two-column-layout>

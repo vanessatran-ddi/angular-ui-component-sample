@@ -17,6 +17,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {DropdownModule} from "primeng/dropdown";
 import {OverlayPanelModule} from "primeng/overlaypanel";
 import {BadgeComponent} from "./badge/badge.component";
+import {DetailsComponent} from "./details/details.component";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {BadgeComponent} from "./badge/badge.component";
     HomeComponent,
     BadgeComponent,
     BasicFormComponent,
-    BasicFormSuccessComponent
+    BasicFormSuccessComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
