@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import {Component, isDevMode} from '@angular/core';
 import {menus} from "./menus";
+import {Router} from "@angular/router";
 
 
 interface Menu {
@@ -8,6 +9,7 @@ interface Menu {
   name: string;
   active?: boolean;
   subMenus: Menu[];
+  id: string;
 }
 @Component({
   selector: 'app-root',
@@ -16,33 +18,35 @@ interface Menu {
 })
 export class AppComponent {
    items: Menu[] = [];
-   constructor() {
-     menus.forEach(menu => {
-       const item: Menu = {
-          displayname: menu.DisplayName,
-          name: menu.Name,
-          url: menu.Url,
-          active: false,
-          subMenus: []
-       };
-       if (menu.SubMenus && menu.SubMenus.length > 0) {
-         menu.SubMenus.forEach(subMenu => {
-           item.subMenus.push({
-             displayname: subMenu.DisplayName,
-             name: menu.Name,
-             url: subMenu.Url,
-             active: false,
-             subMenus: []
-           });
-         });
-       }
-        this.items.push(item);
-     });
-     // Set first menu item and first sub menu item active
-     this.items[0].subMenus[0].active = true;
+   activeMenu: string = "Certification-Work Queue";
+   baseUrl = "";
+   constructor(private router: Router) {
+     this.items = this.getItems();
+     if (!isDevMode()) {
+       this.baseUrl = "/angular-ui-component-sample";
+     }
    }
-   handleSelectMenuItem(event: any) {
-     console.log("Someone clicked on handleSelectMenuItem ");
-     console.log("Navigating to url: ", event.detail.url);
+    getItems(menuItems: any = null): Menu[] {
+    const children = menuItems ? menuItems : menus;
+    return children
+      .map((item: any) => {
+        return {
+          displayname: item.DisplayName,
+          name: item.Name,
+          url: item.Url,
+          active: item.Name === this.activeMenu,
+          subMenus: item.SubMenus && item.SubMenus.length > 0 ? this.getItems([...item.SubMenus]) : [],
+      }
+      });
+  }
+
+  handleSelectMenuItem(event: any) {
+     this.activeMenu = event.detail.name;
+     console.log("This activeMenu is ", this.activeMenu);
+     this.items = [...this.getItems()];
+     const selectedMenuUrl = event.detail.url;
+      if (selectedMenuUrl) {
+        this.router.navigateByUrl(selectedMenuUrl);
+      }
    }
 }

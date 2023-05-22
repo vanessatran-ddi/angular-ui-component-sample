@@ -1,20 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import { Router } from '@angular/router';
-
-interface TableData {
-  [index: string]: string;
-}
-interface City {
-  name: string;
-  code: string;
-}
-import { faker } from "@faker-js/faker";
-interface User {
-  id: string;
-  firstName: string;
-  lastName: string;
-  age: number;
-}
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-home',
@@ -22,9 +7,9 @@ interface User {
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  onDismiss() {
-    console.log("dismissed");
-  }
+  url: string | undefined;
+  constructor(private route: ActivatedRoute) {}
   ngOnInit() {
+    this.url = this.route.snapshot.data['url'];
   }
 }

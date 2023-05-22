@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --port 4300",
-    "build": "ng build --base-href ./",
+    "build": "ng build --configuration production --base-href ./",
     "watch": "ng build --watch --configuration development",
     "deploy": "npx angular-cli-ghpages --dir=/docs --no-silent",
     "test": "ng test"
@@ -22,7 +22,9 @@
     "@angular/platform-browser-dynamic": "^15.0.4",
     "@angular/router": "^15.0.4",
     "@faker-js/faker": "^7.6.0",
+    "angular-gist": "^2.0.0",
     "date-fns": "^2.29.3",
+    "ngx-gist": "^1.0.4",
     "primeng": "^15.4.1",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",

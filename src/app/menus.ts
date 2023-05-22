@@ -2,7 +2,6 @@ export const menus = [
   {
     "Name": "Certification",
     "DisplayName": "Certification",
-    "Url": "http://test.com",
     "IsActive": true,
     "RolesAllowed": [
       "licensingGoaAdmin_FDH_composite"
@@ -12,9 +11,9 @@ export const menus = [
     "Order": 1,
     "SubMenus": [
       {
-        "Name": "Work Queue",
+        "Name": "Certification-Work Queue",
         "DisplayName": "Work Queue",
-        "Url": "http://test.com",
+        "Url": "/certification/work-queue",
         "IsActive": true,
         "RolesAllowed": [ "licensingGoaAdmin_FDH_composite" ],
         "IconName": "workspace_premium",
@@ -22,9 +21,9 @@ export const menus = [
         "Order": 1
       },
       {
-        "Name": "My Assignments",
+        "Name": "Certification-My Assignments",
         "DisplayName": "My Assignments",
-        "Url": "http://test.com",
+        "Url": "/certification/my-assignments",
         "IsActive": true,
         "RolesAllowed": [ "licensingGoaAdmin_FDH_composite" ],
         "IconName": "workspace_premium",
@@ -32,9 +31,9 @@ export const menus = [
         "Order": 2
       },
       {
-        "Name": "Search",
+        "Name": "Certification-Search",
         "DisplayName": "Search",
-        "Url": "http://test.com",
+        "Url": "/certification/search",
         "IsActive": true,
         "RolesAllowed": [ "licensingGoaAdmin_FDH_composite" ],
         "IconName": "workspace_premium",
@@ -42,9 +41,9 @@ export const menus = [
         "Order": 3
       },
       {
-        "Name": "Admin Data",
+        "Name": "Certification-Admin Data",
         "DisplayName": "Admin Data",
-        "Url": "http://test.com",
+        "Url": "/certification/admin-data",
         "IsActive": true,
         "RolesAllowed": [ "licensingGoaAdmin_FDH_composite" ],
         "IconName": "workspace_premium",
@@ -56,7 +55,6 @@ export const menus = [
   {
     "Name": "Licensing",
     "DisplayName": "Licensing",
-    "Url": "http://test.com",
     "IsActive": true,
     "RolesAllowed": [
       "licensingGoaAdmin_FDH_composite"
@@ -66,9 +64,9 @@ export const menus = [
     "Order": 2,
     "SubMenus": [
       {
-        "Name": "Dashboard",
+        "Name": "Licensing-Dashboard",
         "DisplayName": "Dashboard",
-        "Url": "http://test.com",
+        "Url": "/licensing/dashboard",
         "IsActive": true,
         "RolesAllowed": [ "licensingGoaAdmin_FDH_composite" ],
         "IconName": "workspace_premium",
@@ -76,9 +74,9 @@ export const menus = [
         "Order": 1
       },
       {
-        "Name": "Search",
+        "Name": "Licensing-Search",
         "DisplayName": "Search",
-        "Url": "http://test.com",
+        "Url": "/licensing/search",
         "IsActive": true,
         "RolesAllowed": [ "licensingGoaAdmin_FDH_composite" ],
         "IconName": "workspace_premium",
@@ -86,9 +84,9 @@ export const menus = [
         "Order": 2
       },
       {
-        "Name": "Reporting",
+        "Name": "Licensing-Reporting",
         "DisplayName": "Reporting",
-        "Url": "http://test.com",
+        "Url": "/licensing/reporting",
         "IsActive": true,
         "RolesAllowed": [ "licensingGoaAdmin_FDH_composite" ],
         "IconName": "workspace_premium",
@@ -96,9 +94,9 @@ export const menus = [
         "Order": 3
       },
       {
-        "Name": "Admin Data",
+        "Name": "Licensing-Admin Data",
         "DisplayName": "Admin Data",
-        "Url": "http://test.com",
+        "Url": "/licensing/admin-data",
         "IsActive": true,
         "RolesAllowed": [ "licensingGoaAdmin_FDH_composite" ],
         "IconName": "workspace_premium",
@@ -110,7 +108,7 @@ export const menus = [
   {
     "Name": "Family Day Home",
     "DisplayName": "Family Day Home",
-    "Url": "http://test.com",
+    "Url": "/family-day-home",
     "IsActive": true,
     "RolesAllowed": [ "licensingGoaAdmin_FDH_composite" ],
     "IconName": "workspace_premium",
@@ -120,7 +118,6 @@ export const menus = [
   {
     "Name": "Space Creation",
     "DisplayName": "Space Creation",
-    "Url": "http://test.com",
     "IsActive": true,
     "RolesAllowed": [
       "licensingGoaAdmin_FDH_composite"
@@ -130,9 +127,9 @@ export const menus = [
     "Order": 4,
     "SubMenus": [
       {
-        "Name": "Programs",
+        "Name": "Space Creation-Programs",
         "DisplayName": "Programs",
-        "Url": "http://test.com",
+        "Url": "/space-creation/programs",
         "IsActive": true,
         "RolesAllowed": [ "licensingGoaAdmin_FDH_composite" ],
         "IconName": "workspace_premium",
@@ -140,9 +137,9 @@ export const menus = [
         "Order": 1
       },
       {
-        "Name": "Grant Management",
+        "Name": "Space Creation-Grant Management",
         "DisplayName": "Grant Management",
-        "Url": "http://test.com",
+        "Url": "/space-creation/grant-management",
         "IsActive": true,
         "RolesAllowed": [ "licensingGoaAdmin_FDH_composite" ],
         "IconName": "workspace_premium",
@@ -154,7 +151,6 @@ export const menus = [
   {
     "Name": "Affordability Grants",
     "DisplayName": "Affordability Grants",
-    "Url": "http://test.com",
     "IsActive": true,
     "RolesAllowed": [
       "licensingGoaAdmin_FDH_composite"
@@ -164,9 +160,9 @@ export const menus = [
     "Order": 5,
     "SubMenus": [
       {
-        "Name": "Programs",
+        "Name": "Affordability Grants-Programs",
         "DisplayName": "Programs",
-        "Url": "http://test.com",
+        "Url": "/affordability-grants/programs",
         "IsActive": true,
         "RolesAllowed": [ "licensingGoaAdmin_FDH_composite" ],
         "IconName": "workspace_premium",
@@ -174,9 +170,9 @@ export const menus = [
         "Order": 1
       },
       {
-        "Name": "Grant Management",
+        "Name": "Affordability Grants-Grant Management",
         "DisplayName": "Grant Management",
-        "Url": "http://test.com",
+        "Url": "/affordability-grants/grant-management",
         "IsActive": true,
         "RolesAllowed": [ "licensingGoaAdmin_FDH_composite" ],
         "IconName": "workspace_premium",
@@ -188,7 +184,7 @@ export const menus = [
   {
     "Name": "Adjustments",
     "DisplayName": "Adjustments",
-    "Url": "http://test.com",
+    "Url": "/adjustments",
     "IsActive": true,
     "RolesAllowed": [ "licensingGoaAdmin_FDH_composite" ],
     "IconName": "workspace_premium",
@@ -198,7 +194,7 @@ export const menus = [
   {
     "Name": "Wage Top-Up",
     "DisplayName": "Wage Top-Up",
-    "Url": "http://test.com",
+    "Url": "/wage-top-up",
     "IsActive": true,
     "RolesAllowed": [ "licensingGoaAdmin_FDH_composite" ],
     "IconName": "workspace_premium",
@@ -208,7 +204,6 @@ export const menus = [
   {
     "Name": "Subsidy",
     "DisplayName": "Subsidy",
-    "Url": "http://test.com",
     "IsActive": true,
     "RolesAllowed": [
       "licensingGoaAdmin_FDH_composite"
@@ -218,9 +213,9 @@ export const menus = [
     "Order": 7,
     "SubMenus": [
       {
-        "Name": "Work Queue",
+        "Name": "Subsidy-Work Queue",
         "DisplayName": "Work Queue",
-        "Url": "http://test.com",
+        "Url": "subsidy/work-queue",
         "IsActive": true,
         "RolesAllowed": [ "licensingGoaAdmin_FDH_composite" ],
         "IconName": "workspace_premium",
@@ -228,9 +223,9 @@ export const menus = [
         "Order": 1
       },
       {
-        "Name": "My Assignments",
+        "Name": "Subsidy-My Assignments",
         "DisplayName": "My Assignments",
-        "Url": "http://test.com",
+        "Url": "/subsidy/my-assignments",
         "IsActive": true,
         "RolesAllowed": [ "licensingGoaAdmin_FDH_composite" ],
         "IconName": "workspace_premium",
@@ -238,9 +233,9 @@ export const menus = [
         "Order": 2
       },
       {
-        "Name": "Subsidy Application Form",
+        "Name": "Subsidy-Subsidy Application Form",
         "DisplayName": "Subsidy Application Form",
-        "Url": "http://test.com",
+        "Url": "/subsidy/subsidy-application-form",
         "IsActive": true,
         "RolesAllowed": [ "licensingGoaAdmin_FDH_composite" ],
         "IconName": "workspace_premium",
@@ -248,9 +243,9 @@ export const menus = [
         "Order": 3
       },
       {
-        "Name": "Email Notifications",
+        "Name": "Subsidy-Email Notifications",
         "DisplayName": "Email Notifications",
-        "Url": "http://test.com",
+        "Url": "/subsidy/email-notifications",
         "IsActive": true,
         "RolesAllowed": [ "licensingGoaAdmin_FDH_composite" ],
         "IconName": "workspace_premium",
@@ -258,9 +253,9 @@ export const menus = [
         "Order": 4
       },
       {
-        "Name": "Search",
+        "Name": "Subsidy-Search",
         "DisplayName": "Search",
-        "Url": "http://test.com",
+        "Url": "/subsidy/search",
         "IsActive": true,
         "RolesAllowed": [ "licensingGoaAdmin_FDH_composite" ],
         "IconName": "workspace_premium",
@@ -272,7 +267,6 @@ export const menus = [
   {
     "Name": "Program Management",
     "DisplayName": "Program Management",
-    "Url": "http://test.com",
     "IsActive": true,
     "RolesAllowed": [
       "licensingGoaAdmin_FDH_composite"
@@ -282,9 +276,9 @@ export const menus = [
     "Order": 7,
     "SubMenus": [
       {
-        "Name": "Programs",
+        "Name": "Program Management-Programs",
         "DisplayName": "Users",
-        "Url": "http://test.com",
+        "Url": "/program-management/programs",
         "IsActive": true,
         "RolesAllowed": [ "licensingGoaAdmin_FDH_composite" ],
         "IconName": "workspace_premium",
@@ -292,9 +286,9 @@ export const menus = [
         "Order": 1
       },
       {
-        "Name": "Users",
+        "Name": "Program Management-Users",
         "DisplayName": "Users",
-        "Url": "http://test.com",
+        "Url": "/program-management/users",
         "IsActive": true,
         "RolesAllowed": [ "licensingGoaAdmin_FDH_composite" ],
         "IconName": "workspace_premium",
@@ -302,9 +296,9 @@ export const menus = [
         "Order": 2
       },
       {
-        "Name": "Access Requests",
+        "Name": "Program Management-Access Requests",
         "DisplayName": "Access Requests",
-        "Url": "http://test.com",
+        "Url": "/program-management/access-requests",
         "IsActive": true,
         "RolesAllowed": [ "licensingGoaAdmin_FDH_composite" ],
         "IconName": "workspace_premium",
@@ -312,9 +306,9 @@ export const menus = [
         "Order": 3
       },
       {
-        "Name": "Removal Requests",
+        "Name": "Program Management-Removal Requests",
         "DisplayName": "Removal Requests",
-        "Url": "http://test.com",
+        "Url": "/program-management/removal-requests",
         "IsActive": true,
         "RolesAllowed": [ "licensingGoaAdmin_FDH_composite" ],
         "IconName": "workspace_premium",
@@ -326,7 +320,7 @@ export const menus = [
   {
     "Name": "GOA Staff Management",
     "DisplayName": "GOA Staff Management",
-    "Url": "http://test.com",
+    "Url": "/goa-staff-management",
     "IsActive": true,
     "RolesAllowed": [ "licensingGoaAdmin_FDH_composite" ],
     "IconName": "workspace_premium",
