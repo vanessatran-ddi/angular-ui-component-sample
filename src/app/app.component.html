@@ -13,24 +13,25 @@
   </section>
 
   <section slot="nav">
-    <goa-left-nav (_change)="handleSelectMenuItem($event)">
-      <goa-left-nav-item
+    <goax-sidebar (_change)="handleSelectMenuItem($event)">
+      <goax-sidebar-item
         *ngFor="let item of items; let i=index"
         [active]="item.active"
         [name]="item.name"
+        [url]="item.url"
         [displayname]="item.displayname"
         >
         <ng-template *ngIf="item.subMenus" ngFor let-subMenu [ngForOf]="item.subMenus">
-          <goa-left-nav-item
+          <goax-sidebar-item
             [active]="subMenu.active"
             [name]="subMenu.name"
             [displayname]="subMenu.displayname"
             [url]="subMenu.url"
             >
-          </goa-left-nav-item>
+          </goax-sidebar-item>
         </ng-template>
-      </goa-left-nav-item>
-    </goa-left-nav>
+      </goax-sidebar-item>
+    </goax-sidebar>
 
 
   </section>

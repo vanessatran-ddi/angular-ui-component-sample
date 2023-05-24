@@ -5,9 +5,9 @@
     The HTML Code as below.
     <code>
       <br>
-      &lt;goa-left-nav (_change)="handleSelectMenuItem($event)"&gt;
+      &lt;goax-sidebar (_change)="handleSelectMenuItem($event)"&gt;
       <br>
-        &nbsp; &lt;goa-left-nav-item
+        &nbsp; &lt;goax-sidebar-item
           *ngFor="let item of items; let i=index"
       &nbsp;&nbsp;[active]="item.active"
       &nbsp;&nbsp;[name]="item.name"
@@ -15,19 +15,19 @@
       <br>
       &nbsp; &nbsp; &lt;ng-template *ngIf="item.subMenus" ngFor let-subMenu [ngForOf]="item.subMenus"&gt;
       <br>
-      &nbsp; &nbsp; &nbsp; &lt;goa-left-nav-item
+      &nbsp; &nbsp; &nbsp; &lt;goax-sidebar-item
       <br>&nbsp; &nbsp; &nbsp; [active]="subMenu.active"
       <br>&nbsp; &nbsp; &nbsp; [name]="subMenu.name"
       <br>&nbsp; &nbsp; &nbsp; [displayname]="subMenu.displayname"
       <br>&nbsp; &nbsp; &nbsp; [url]="subMenu.url"&gt;
       <br>
-      &nbsp; &nbsp; &nbsp;&lt;/goa-left-nav-item&gt;
+      &nbsp; &nbsp; &nbsp;&lt;/goax-sidebar-item&gt;
       <br>
       &nbsp; &nbsp;&lt;/ng-template&gt;
       <br>
-      &nbsp; &lt;/goa-left-nav-item&gt;
+      &nbsp; &lt;/goax-sidebar-item&gt;
       <br>
-      &lt;/goa-left-nav&gt;
+      &lt;/goax-sidebar&gt;
     </code>
     <br/>
 

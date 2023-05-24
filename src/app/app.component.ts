@@ -42,7 +42,6 @@ export class AppComponent {
 
   handleSelectMenuItem(event: any) {
      this.activeMenu = event.detail.name;
-     console.log("This activeMenu is ", this.activeMenu);
      this.items = [...this.getItems()];
      const selectedMenuUrl = event.detail.url;
       if (selectedMenuUrl) {

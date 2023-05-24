@@ -11,7 +11,7 @@
   },
   "private": true,
   "dependencies": {
-    "@abgov/angular-components": "^2.0.0",
+    "@abgov/angular-components": "/Users/thytran142/code/ui-components/dist/libs/angular-components",
     "@abgov/web-components": "/Users/thytran142/code/ui-components/dist/libs/web-components",
     "@angular/animations": "^15.0.4",
     "@angular/common": "^15.0.4",
