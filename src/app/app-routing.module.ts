@@ -6,9 +6,12 @@ import { BasicFormComponent } from './basic-form/basic-form.component';
 import { BasicFormSuccessComponent } from './basic-form/basic-form-success.component';
 import {BadgeComponent} from "./badge/badge.component";
 import {DetailsComponent} from "./details/details.component";
+import {FormStepperComponent} from "./form-stepper/form-stepper.component";
+import {ModalComponent} from "./modal/modal.component";
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent, data: {url: "home"}},
+
   { path: 'work-queue', component: HomeComponent, data: {url: "work-queue"}},
   { path: 'certification/work-queue', component: HomeComponent, data: {url: "/certification/work-queue"}},
   { path: 'certification/my-assignments', component: HomeComponent, data: {url: "/certification/my-assignments"}},
@@ -40,6 +43,8 @@ const routes: Routes = [
   { path: 'basic-form', component: BasicFormComponent },
   { path: 'basic-form-success', component: BasicFormSuccessComponent },
   { path: 'details', component: DetailsComponent },
+  { path: 'form-stepper', component: FormStepperComponent},
+  { path: 'modal', component: ModalComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];
 

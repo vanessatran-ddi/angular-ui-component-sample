@@ -11,13 +11,11 @@ import { AngularComponentsModule } from '@abgov/angular-components';
 import { HomeComponent } from './home/home.component';
 import { BasicFormComponent } from './basic-form/basic-form.component';
 import { BasicFormSuccessComponent } from './basic-form/basic-form-success.component';
-import {DialogModule} from "primeng/dialog";
-import {ButtonModule} from "primeng/button";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {DropdownModule} from "primeng/dropdown";
-import {OverlayPanelModule} from "primeng/overlaypanel";
 import {BadgeComponent} from "./badge/badge.component";
 import {DetailsComponent} from "./details/details.component";
+import { FormStepperComponent } from './form-stepper/form-stepper.component';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +24,9 @@ import {DetailsComponent} from "./details/details.component";
     BadgeComponent,
     BasicFormComponent,
     BasicFormSuccessComponent,
-    DetailsComponent
+    DetailsComponent,
+    FormStepperComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
@@ -34,11 +34,7 @@ import {DetailsComponent} from "./details/details.component";
     FormsModule,
     ReactiveFormsModule,
     AngularComponentsModule,
-    DialogModule,
-    ButtonModule,
     BrowserAnimationsModule,
-    DropdownModule,
-    OverlayPanelModule
   ],
   providers: [],
   bootstrap: [AppComponent],

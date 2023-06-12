@@ -18,7 +18,7 @@ interface Menu {
 })
 export class AppComponent {
    items: Menu[] = [];
-   activeMenu: string = "Certification-Work Queue";
+   activeMenu: string = "home"; // url
    baseUrl = "";
    constructor(private router: Router) {
      this.items = this.getItems();
@@ -41,6 +41,7 @@ export class AppComponent {
   }
 
   handleSelectMenuItem(event: any) {
+     console.log(event);
      this.activeMenu = event.detail.name;
      this.items = [...this.getItems()];
      const selectedMenuUrl = event.detail.url;

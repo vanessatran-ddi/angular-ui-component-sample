@@ -1,115 +1,21 @@
 <main>
   <h1>Notification Banner</h1>
-  <p aria-hidden="true">
-    User can change: "aria-label" to add-on the label of the role="status".
-    If the content is empty, then the screen reader will read as "empty" as default. (It cannot be changed)
-  </p>
 
-  <h4>Case 1: No icon, has content, no aria-label</h4>
-  <goa-badge type="success" content="Case 1 success message"></goa-badge>
-  <p style="font-size: 14px; color: red">It will read as "Case 1 success message"</p>
-<!--  <p aria-hidden="true" style="font-size:11px;">-->
-<!--    <br>-->
-<!--    The HTML Code as below.-->
-<!--    <code>-->
-<!--      <br>-->
-<!--      &lt;div class="goa-badge-content" role="status"&gt;&lt;Case 1 success message&lt;div/&gt;-->
-<!--    </code>-->
-<!--    <br/>-->
-<!--    <small style="color:red;">-->
-<!--      It follows the example of <a href="https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA22">Example 1: Including a search result message from WAI</a>-->
-<!--    </small>-->
-<!--  </p>-->
-
-  <h4>Case 2: No icon, has content, has customized aria-label "Number of items"</h4>
-  <goa-badge type="success" content="2" arialabel="Number of items"></goa-badge>
-  <p style="font-size: 14px; color: red">It will read as "Number of items, 2"</p>
-<!--  <p aria-hidden="true" style="font-size:11px;">-->
-<!--    <br>-->
-<!--    The HTML Code as below.-->
-<!--    <code>-->
-<!--      <br>-->
-<!--      &lt;div class="goa-badge-content" role="status" aria-roledescription="success status" aria-label="Case 2 success message"&gt;&lt;div/&gt;-->
-<!--    </code>-->
-<!--    <br/>-->
-<!--  </p>-->
-
-  <h4>Case 3: Has icon, has content, no customized aria-label</h4>
-  <goa-badge type="success" content="Case 3 success message with icon" icon></goa-badge>
-  <p style="font-size: 14px; color: red">It will read as "Case 3 success message with icon"</p>
-<!--  <p aria-hidden="true" style="font-size:11px;">-->
-<!--    <br>-->
-<!--    The HTML Code as below.-->
-<!--    <code>-->
-<!--      <br/>-->
-<!--      &lt;div class="goa-badge badge-success" role="status" aria-roledescription="success status"&gt;-->
-<!--      <br/>-->
-<!--      &nbsp; &lt;ion-icon alt="checkmark-circle" role="img" class="md hydrated" aria-label="checkmark circle outline"&gt;&lt;/ion-icon&gt;-->
-<!--      <br/>-->
-<!--      &nbsp; &lt;div class="goa-badge-content"&gt;&lt;Case 3 success message with icon&lt;div/&gt;-->
-<!--      <br/>-->
-<!--      &lt;div/&gt;-->
-<!--    </code>-->
-<!--    <br/>-->
-<!--  </p>-->
-  <h4>Case 4: Has icon, has content, has customized aria-label "Number of items"</h4>
-  <goa-badge type="emergency" icon arialabel="Number of items" content="4"></goa-badge>
-  <p style="font-size: 14px; color: red">It will read as "Number of items, 4"</p>
-<!--  <p aria-hidden="true" style="font-size:11px;">-->
-<!--    It will read as <strong>"Case 4 emergency message, emergency status, warning outline image, Warning image, 4"</strong>.-->
-<!--    <br>-->
-<!--    The HTML Code as below.-->
-<!--    <code>-->
-<!--      <br/>-->
-<!--      &lt;div class="goa-badge badge-emergency" role="status" aria-roledescription="emergency status" aria-label="Case 4 emergency message"&gt;-->
-<!--      <br/>-->
-<!--      &nbsp; &lt;ion-icon alt="checkmark-circle" role="img" class="md hydrated" aria-label="checkmark circle outline"&gt;&lt;/ion-icon&gt;-->
-<!--      <br/>-->
-<!--      &nbsp; &lt;div class="goa-badge-content"&gt;&lt;Case 4 success message with icon&lt;div/&gt;-->
-<!--      <br/>-->
-<!--      &lt;div/&gt;-->
-<!--    </code>-->
-<!--    <br/>-->
-<!--  </p>-->
-
-  <h4>Case 5: Has icon, no content, no customized aria-label</h4>
-  <p style="font-size: 14px; color: red">It will <strong>NOT</strong> read.</p>
-  <goa-badge type="dark" icon></goa-badge>
-<!--  <p aria-hidden="true" style="font-size:11px;">-->
-<!--    It will read as <strong>"information circle outline img, Information Circle image"</strong>.-->
-<!--    <br>-->
-<!--    The HTML Code as below.-->
-<!--    <code>-->
-<!--      <br/>-->
-<!--      &lt;div class="goa-badge badge-dark icon-only" role="status" aria-roledescription="dark status"&gt;-->
-<!--      <br/>-->
-<!--      &nbsp; &lt;ion-icon role="img" class="md hydrated" aria-label="information circle outline"&gt;&lt;/ion-icon&gt;-->
-<!--      <br/>-->
-<!--      &lt;div/&gt;-->
-<!--    </code>-->
-<!--    <br/>-->
-<!--  </p>-->
-
-  <h4>Case 6: Has icon, no content, has customized aria-label "Information"</h4>
+  <h4 aria-hidden="true">1: Has icon, no content, has customized aria-label "Information"</h4>
   <goa-badge type="dark" arialabel="Information" icon></goa-badge>
-  <p style="font-size: 14px; color: red">It will read "Information" </p>
-<!--  <p aria-hidden="true" style="font-size:11px;">-->
-<!--    It will read as <strong>"Case 6 dark message, dark status, information circle outline img, Information Circle image"</strong>.-->
-<!--    <br>-->
-<!--    The HTML Code as below.-->
-<!--    <code>-->
-<!--      <br/>-->
-<!--      &lt;div class="goa-badge badge-dark icon-only" role="status" aria-roledescription="dark status" aria-label="Case 6 dark message"&gt;-->
-<!--      <br/>-->
-<!--      &nbsp; &lt;ion-icon role="img" class="md hydrated" aria-label="information circle outline"&gt;&lt;/ion-icon&gt;-->
-<!--      <br/>-->
-<!--      &lt;div/&gt;-->
-<!--    </code>-->
-<!--    <br/>-->
-<!--  </p>-->
+  <p style="font-size: 14px; color: red" aria-hidden="true">It will read "Information"</p>
 
-<!--  <goa-badge type="dark" icon></goa-badge>-->
-<!--  <p>-->
-<!--    <small style="color: black" aria-hidden="true">It will read as "information circle outline, information-circle, dark status"</small>-->
-<!--  </p>-->
+  <h4 aria-hidden="true">2: No icon, has content</h4>
+  <goa-badge type="success" content="2"></goa-badge>
+  <p style="font-size: 14px; color: red" aria-hidden="true">It will read as "2" only. Even having aria-label, it will be ignored.</p>
+
+  <h4 aria-hidden="true">3: Has icon, has content, has customized aria-label "Number of items"</h4>
+  <goa-badge type="emergency" icon arialabel="Number of items" content="4"></goa-badge>
+  <p style="font-size: 14px; color: red" aria-hidden="true">It will read as "4". Aria-label is ignored.</p>
+
+
+  <h4 aria-hidden="true">Case 5: Has icon, no content, no customized aria-label</h4>
+  <p style="font-size: 14px; color: red" aria-hidden="true">It will <strong>NOT</strong> read. The warning log is issued. </p>
+  <goa-badge type="dark" icon></goa-badge>
+
 </main>
