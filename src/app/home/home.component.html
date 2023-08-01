@@ -1,36 +1,83 @@
 <h3>Welcome, you are on the {{url}} page</h3>
-<p>This is the demo of how to use left side navigation menu</p>
+<p>This is the demo of how to combobox</p>
+
+
+<goa-form-item label="Basic">
+  <goa-combobox name="basic" placeholder="Country" (_change)="handleChangeBasic($event)">
+    <goa-combobox-item *ngFor="let country of countries"
+                       [value]="country.code"
+                       [label]="country.name"></goa-combobox-item>
+  </goa-combobox>
+</goa-form-item>
+
+<h4>Sample Code</h4>
+
   <p aria-hidden="true" style="font-size:14px;">
     <br>
     The HTML Code as below.
     <code>
       <br>
-      &lt;goax-sidebar (_change)="handleSelectMenuItem($event)"&gt;
+      &lt;goa-combobox name = "basic" (_change)="handleChangeBasic($event)"&gt;
       <br>
-        &nbsp; &lt;goax-sidebar-item
-          *ngFor="let item of items; let i=index"
-      &nbsp;&nbsp;[active]="item.active"
-      &nbsp;&nbsp;[name]="item.name"
-      &nbsp;&nbsp;[displayname]="item.displayname"&gt;
+        &nbsp; &lt;goa-combobox-item
+          *ngFor="let country of countries"
+      <br/>
+      &nbsp;&nbsp;[value]="country.code"
+      <br/>
+      &nbsp;&nbsp;[label]="country.name"&gt;
       <br>
-      &nbsp; &nbsp; &lt;ng-template *ngIf="item.subMenus" ngFor let-subMenu [ngForOf]="item.subMenus"&gt;
+      &nbsp;&lt;/goa-combobox-item&gt;
       <br>
-      &nbsp; &nbsp; &nbsp; &lt;goax-sidebar-item
-      <br>&nbsp; &nbsp; &nbsp; [active]="subMenu.active"
-      <br>&nbsp; &nbsp; &nbsp; [name]="subMenu.name"
-      <br>&nbsp; &nbsp; &nbsp; [displayname]="subMenu.displayname"
-      <br>&nbsp; &nbsp; &nbsp; [url]="subMenu.url"&gt;
-      <br>
-      &nbsp; &nbsp; &nbsp;&lt;/goax-sidebar-item&gt;
-      <br>
-      &nbsp; &nbsp;&lt;/ng-template&gt;
-      <br>
-      &nbsp; &lt;/goax-sidebar-item&gt;
-      <br>
-      &lt;/goax-sidebar&gt;
+      &lt;/goa-combobox&gt;
     </code>
     <br/>
-
-
-    For the full implementation on TS, refer: <a href="https://gist.github.com/vanessatran-ddi/00ec774da422c87cb36e67b49d0bace3" target="_blank">Here </a>
   </p>
+
+<h4>Keyboard Navigation Support</h4>
+
+<div class="table-wrap"><table aria-labelledby="kbd_label_textbox kbd_label" class="def">
+  <thead>
+  <tr>
+    <th>Key</th>
+    <th>Function</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr data-test-id="textbox-key-down-arrow">
+    <th><kbd>Down Arrow</kbd></th>
+    <td>
+      <ul>
+        <li>If the textbox is not empty and the listbox is displayed, moves visual focus to the first suggested value.</li>
+        <li>If the textbox is empty and the listbox is not displayed, opens the listbox and moves visual focus to the first option.</li>
+        <li>In both cases DOM focus remains on the textbox.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr data-test-id="textbox-key-alt-down-arrow">
+    <th><kbd>Alt + Down Arrow</kbd></th>
+    <td>Opens the listbox without moving focus or changing selection.</td>
+  </tr>
+  <tr data-test-id="textbox-key-up-arrow">
+    <th><kbd>Up Arrow</kbd></th>
+    <td>
+      <ul>
+        <li>If the textbox is not empty and the listbox is displayed, moves visual focus to the last suggested value.</li>
+        <li>If the textbox is empty, first opens the listbox if it is not already displayed and then moves visual focus to the last option.</li>
+        <li>In both cases DOM focus remains on the textbox.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr data-test-id="textbox-key-enter">
+    <th><kbd>Enter</kbd></th>
+    <td>Closes the listbox if it is displayed.</td>
+  </tr>
+  <tr data-test-id="textbox-key-escape">
+    <th><kbd>Escape</kbd></th>
+    <td>
+      <ul>
+        <li>If the listbox is displayed, closes it.</li>
+        <li>If the listbox is not displayed, clears the textbox.</li>
+      </ul>
+    </td>
+  </tr></tbody>
+</table></div>

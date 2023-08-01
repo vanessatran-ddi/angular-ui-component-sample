@@ -1,0 +1,15 @@
+<goa-button id="button" (_click)="openModal()">Open Modal</goa-button>
+<goa-modal id="modal" [open]="isOpen" (_close)="closeModal()" closable heading="Do you agree?">
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia obcaecati id molestiae,
+    natus dicta, eaque qui iusto similique, libero explicabo eligendi eius laboriosam!
+    Repellendus ducimus officia asperiores. Eos, eius numquam.
+  </p>
+  <goa-popover>
+    <p>This is a popover</p>
+    It can be used for a number of different contexts.
+    <div slot="target">
+      <goa-button type="secondary" size="compact">Click me</goa-button>
+    </div>
+  </goa-popover>
+</goa-modal>

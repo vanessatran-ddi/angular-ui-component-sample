@@ -1,21 +1,14 @@
 <main>
   <h1>Notification Banner</h1>
 
-  <h4 aria-hidden="true">1: Has icon, no content, has customized aria-label "Information"</h4>
-  <goa-badge type="dark" arialabel="Information" icon></goa-badge>
-  <p style="font-size: 14px; color: red" aria-hidden="true">It will read "Information"</p>
-
-  <h4 aria-hidden="true">2: No icon, has content</h4>
-  <goa-badge type="success" content="2"></goa-badge>
-  <p style="font-size: 14px; color: red" aria-hidden="true">It will read as "2" only. Even having aria-label, it will be ignored.</p>
-
-  <h4 aria-hidden="true">3: Has icon, has content, has customized aria-label "Number of items"</h4>
-  <goa-badge type="emergency" icon arialabel="Number of items" content="4"></goa-badge>
-  <p style="font-size: 14px; color: red" aria-hidden="true">It will read as "4". Aria-label is ignored.</p>
-
-
-  <h4 aria-hidden="true">Case 5: Has icon, no content, no customized aria-label</h4>
-  <p style="font-size: 14px; color: red" aria-hidden="true">It will <strong>NOT</strong> read. The warning log is issued. </p>
-  <goa-badge type="dark" icon></goa-badge>
-
+  <goa-input
+    goaValue
+    type="date"
+    name="withinTheNextMonth"
+    [min]="minDate"
+    [max]="maxDate"
+    [formControl]="reactiveDateFormCtrl"
+    [value]="reactiveDateFormCtrl.value"
+  >
+  </goa-input>
 </main>

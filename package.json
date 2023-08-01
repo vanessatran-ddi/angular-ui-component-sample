@@ -11,8 +11,8 @@
   },
   "private": true,
   "dependencies": {
-    "@abgov/angular-components": "/Users/thytran142/WebstormProjects/alberta-ui-components/dist/libs/angular-components",
-    "@abgov/web-components": "/Users/thytran142/WebstormProjects/alberta-ui-components/dist/libs/web-components",
+    "@abgov/angular-components": "/Users/thytran142/WebstormProjects/ui-components/dist/libs/angular-components",
+    "@abgov/web-components": "/Users/thytran142/WebstormProjects/ui-components/dist/libs/web-components",
     "@angular/animations": "^15.0.4",
     "@angular/common": "^15.0.4",
     "@angular/compiler": "^15.0.4",
